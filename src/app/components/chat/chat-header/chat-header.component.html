@@ -1,0 +1,54 @@
+
+<nav class="headline">
+  <div class="back" [hidden]="!this.backIsSelected">
+    <a routerLink="../" (click)="selectBack()"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+  </div>
+
+  <!--Image and name of the Studybuddy-->
+  <div class="portrait">
+    <div class="image">
+      <img [src]="buddyImage" class ="imageSize" (click)="selectBild()">
+    </div>
+    <div class="title">
+      {{title}}
+    </div>
+    <div class="name">
+      {{ name }}
+    </div>
+  </div>
+
+  <!--Stars and medalls-->
+  <div class="rewards">
+    <div class="stars">
+      <img [src]="starImage" class="image-star">
+    </div>
+    <div class="amountStars">
+      <p class="amountStyle">{{ amountStars }}</p>
+    </div>
+    <div class="medalls">
+      <img [src]="medallImage" class="image-medall">
+    </div>
+    <div class="amountMedalls">
+      <p class="amountStyle">{{ amountMedalls }}</p>
+    </div>
+  </div>
+  <!--Progress bar-->
+  <div class="statusbar">
+    <app-progress-bar></app-progress-bar>
+  </div>
+
+
+  <!--Level-->
+  <div class="level">
+    <div class="levelText">
+      <p class="levelTextStyle">Level: </p>
+    </div>
+    <div class="playerLevel">
+      <p class="levelPlayerStyle">{{ playerLevel }}</p>
+    </div>
+  </div>
+</nav>
+<div [hidden]="!bildIsSelected" class = "overlay">
+  <app-profil class="app-profil"></app-profil>
+</div>
+<router-outlet></router-outlet>

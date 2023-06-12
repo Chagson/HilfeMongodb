@@ -1,0 +1,18 @@
+<app-chat-header></app-chat-header>
+<div >
+  <div class="startChat"></div>
+  <div class="chat-window__messages" #messageContainer>
+    <app-chat-message
+      *ngFor="let message of messages"
+      [messageText]="message.text"
+      [messageTime]="message.time"
+      [messageImage]="message.image"
+      [messageButtons]="message.buttons"
+      [isUser]="message.isUser"
+      (buttonClick)="handleButtonClick($event)"
+    ></app-chat-message>
+  </div>
+  <div class="endChat"></div>
+  <app-chat-user-input (sendUserInput)="addMessage($any($event))"></app-chat-user-input>
+
+</div>

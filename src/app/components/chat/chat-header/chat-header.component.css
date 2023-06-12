@@ -1,0 +1,253 @@
+@import "~font-awesome/css/font-awesome.css";
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  background-color: #f8f9fa;
+  color: white;
+}
+
+.headline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #dcdcdc;
+  color: 2b92fa;
+  border-bottom: 2px solid black;
+  text-align: center;
+  font-weight: 600;
+  font-size: large;
+  padding: 15px;
+  display: grid;
+  grid-template-areas: 
+    "back image experience"
+    "back statusbar level";
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  height: 130px;
+  width: 100%;
+}
+
+.back {
+  grid-area: back;
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  margin-left: 5px;
+}
+
+.portrait {
+  grid-area: image;
+  display: grid;
+  grid-template-areas: 
+    "image title ."
+    "image name .";
+  grid-template-rows: 30px 30px 1fr;
+  grid-template-columns: 100px 100px 1fr;
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+  width: fit-content;
+  height: fit-content;
+}
+
+.portrait .image {
+  grid-area: image;
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+}
+
+.portrait .image:hover {
+  cursor: pointer;
+}
+
+.portrait .name {
+  grid-area: name;
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  text-align: center;
+}
+
+.portrait .title {
+  grid-area: title;
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+}
+
+.rewards {
+  grid-area: experience;
+  display: grid;
+  grid-template-areas: 
+  "amountStars stars"
+  "amountMedalls medalls";
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+  height: fit-content;
+  width: fit-content;
+}
+
+.rewards .stars {
+  grid-area: stars;
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  margin-top: auto;
+}
+
+.rewards .medalls {
+  grid-area: medalls;
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+}
+
+.rewards .amountStars {
+  grid-area: amountStars;
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+}
+
+.rewards .amountMedalls {
+  grid-area: amountMedalls;
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+}
+
+.rewards .amountStyle {
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+}
+
+
+.statusbar {
+  grid-area: statusbar;
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  margin-top: 15px;
+}
+
+.image-statusbar {
+  height: 30px;
+  width: 200px;
+}
+
+.level {
+  grid-area: level;
+  display: grid;
+  grid-template-areas:
+  "levelText playerLevel";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  height: fit-content;
+  width: fit-content;
+  margin: auto;
+  margin-top: 13px;
+}
+
+.level .text {
+  grid-area: levelText;
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+}
+
+.level .playerLevel {
+  grid-area: playerLevel;
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+}
+
+.level .levelTextStyle {
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  margin-right: 15px;
+  margin-left: 25px;
+}
+
+.level .levelPlayerStyle {
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  margin-right: 100px;
+}
+
+.image-star {
+  height: 20px;
+  width: 20px;
+  margin-bottom: 4px;
+}
+
+.image-medall {
+  height: 20px;
+  width: 20px;
+}
+
+
+.close-button {
+  cursor: pointer;
+  color: white;
+  border: 0;
+  background-color: transparent;
+}
+
+.fa-chevron-left {
+  color: 2b92fa;
+}
+
+.imageSize {
+  width: 60px;
+  height: 70px;
+  margin-right: 20px;
+}
+.overlay {
+  position: fixed;
+  display:flex;
+  align-items: flex-end;
+  justify-content: center;
+  left: 39%;
+  top: 80px;
+  width: 23%;
+  height: 50%;
+  border-radius: 5px;
+  background-color: rgba(201, 201, 201, 1); /* Hintergrundfarbe des Overlays anpassen */
+  z-index: 9999; /* z-Index erhöhen, um über anderen Komponenten zu liegen */
+} 
+.app-profil{
+  width: 150px;
+  height: 60px;
+}
+
+
+

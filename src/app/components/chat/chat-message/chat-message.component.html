@@ -1,0 +1,51 @@
+<div class="message" [ngClass]="{'message--user': isUser}">
+  <div class="message__content">
+    <p class="message__text" >
+      <span *ngIf="!isTyping" [innerHTML]="messageText">{{ messageText }}</span>
+      <span *ngIf="isTyping">schreibt...</span>
+      <img *ngIf="messageImage && !isTyping" [src]="messageImage" class="message__image" alt="Bildnachricht" />
+    </p>
+
+    <!-- Hier muss dann wahrscheinlich noch eine Bedingung hin, dass dieser Teil nur aufgerufen wird, wenn es sich um eine Frage handelt-->
+    <div class="question-layout">
+      <div *ngIf="messageButtons && messageButtons.length > 0 && !isTyping" class="message__buttons">
+
+        <!--Timer-->
+        <div class="first-question-line">
+          <div class="timer-container" *ngIf="TimerEin">     
+            <div class="timerStatic">
+              <h2 class="displayedTime">{{ seconds | number: '2.0'  }}s</h2>
+            </div>
+          </div>
+
+          <!--Number of question (still hardcoded)-->
+          <div class="question-number">
+            <p>Frage 1 von 5</p>
+          </div>
+        </div>
+
+        <ng-container *ngFor="let button of messageButtons;">
+          <button  class="message__button" (click)="onButtonClick(button.payload)" [disabled]="isButtonDisabled">
+            {{ button.title }} 
+          </button>
+          <br>
+        </ng-container>
+        
+        <!--possible points for this question (still hardcoded)-->
+        <div class="last-question-line">
+          <div class="possible-points">
+            <p>Mögliche Punkte: 3</p>
+          </div>
+
+          <!--total points (still hardcoded)-->
+          <div class="total-points">
+            <p>Punktestand: 25/30</p>
+          </div>
+        </div>
+
+
+
+      </div>
+  </div>
+  </div>
+</div>

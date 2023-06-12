@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .button-container {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .button {
+    position: fixed;
+    background-color: #be1d3c;
+    border-radius: 20px;
+    width: 150px;
+    height: 60px;
+    border: 2px solid #000000;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    font-size: 18px;
+    font-weight: 600;
+    color:#ffffff;
+    font-family: "Arial", "sans-serif";
+    text-decoration: none;
+  }
+
+  .button:hover {
+    background-color: #f0798f;
+    color: #ffffff;
+  }
+
+  .signUp-button {
+    bottom: 50%;
+  }
+
+  .registration-button {
+    bottom: 40%;
+  }
+
+  .selected {
+    display: none;
+  }
+  .isSelected {
+    display:none;
+  }

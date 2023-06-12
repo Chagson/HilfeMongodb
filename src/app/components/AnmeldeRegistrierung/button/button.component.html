@@ -1,0 +1,16 @@
+<body>
+    <app-inputs [class.isSelected]="check" [checkInput] = " checkInput "></app-inputs>
+    <div class="button-container">
+        
+        <a class="button signUp-button" [class.selected]="checkSelect" (click)="selectAnmelden()">Anmelden</a><br>
+    </div>
+    <div class="button-container" >
+        <a class="button registration-button" [class.selected]= "checkSelect" (click)="selectRegistrieren()">Registrieren</a><br>
+
+    </div>
+    <router-outlet></router-outlet>
+    <button (click)="createDocument()">Create Document</button>
+<button (click)="readDocuments()">Read Documents</button>
+<button (click)="updateDocument()">Update Document</button>
+<button (click)="deleteDocument()">Delete Document</button>
+    </body>

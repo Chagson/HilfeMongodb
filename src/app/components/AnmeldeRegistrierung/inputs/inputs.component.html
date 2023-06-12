@@ -1,0 +1,55 @@
+<div [class.selected] = "check">
+<div>
+  <p  class="headline">Vorlesungsinhalte spielerisch lernen</p> <br>
+  <p  class="subline">Nutze jetzt den StudyBuddy</p>
+</div>
+<div class="forBorder">
+<!--Layout for the registration page-->
+<div class="form-container" [class.selected]="isRegistrierenSelected">
+  <div [class.selected]="checkInput">
+  <form>
+    <div class="form-field" >
+      <label for="benutzername">Benutzername:</label>
+      <input class="input" type="text" id="benutzername" name="benutzername" required>
+    </div>
+    <div class="form-field" >
+      <label for="email">E-Mail-Adresse:</label>
+      <input class=" input" type="email" id="email" name="email" required>
+    </div>
+    <div class="form-field">
+      <label for="password">Passwort:</label>
+      <input class="input" type="password" id="password" name="password" required>
+    </div>
+    <div class="form-submit">
+      <button class="button" type="submit" (click) = "submitForm()">Registrieren</button> <br>
+    </div>
+  </form>
+  <a class="signUpHint" (click)="selectAnmelden()"> Du hast bereits ein Konto? Hier geht's zur Anmeldung.</a>
+</div>  
+</div>
+
+
+
+<!--Layout for the login page-->
+
+<div class="form-container" [class.selected]="isAnmeldenSelected">
+  <div [class.selected]="!checkInput">
+  <form>
+    <div class="form-field" >
+      <label for="email">E-Mail-Adresse:</label>
+      <input class="input" type="email" id="email" name="email" required>
+    </div>
+    <div class="form-field">
+      <label for="password">Passwort:</label>
+      <input class="input" type="password" id="password" name="password" required>
+    </div>
+    <div class="form-submit">
+      <a routerLink="startButtons" ><button class="button" type="submit" (click) = "submitForm()">Anmelden</button> </a><br>
+    </div>
+  </form>
+  <a class="signUpHint" (click)="selectRegistrieren()"> Noch kein Konto vorhanden? Hier geht's zur Registrierung.</a>
+</div>
+</div>
+</div>
+</div>
+<router-outlet></router-outlet>

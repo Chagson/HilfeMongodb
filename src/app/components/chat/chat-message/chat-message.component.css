@@ -1,0 +1,211 @@
+
+.message {
+  display: flex;
+  width: 100%;
+  border-color:red;
+  justify-content: flex-start;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+
+.message--user {
+  justify-content: flex-end;
+}
+
+.message__content {
+  display: flex;
+  justify-content:center;
+  flex-direction: column;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.message__text {
+  border-radius: 0 20px 20px 20px;
+  padding: 8px 16px;
+  margin-bottom: 0px;
+  color: rgb(0, 0, 0); /* Standardtextfarbe */
+  background-color: #11f8f8; /* Standardhintergrundfarbe */
+  width: fit-content;
+}
+
+.message--user .message__text {
+  color: rgb(255, 255, 255); /* Textfarbe für Benutzernachricht */
+  background-color: #1900ff; /* Hintergrundfarbe für Benutzernachricht */
+  border-radius: 20px 0 20px 20px;
+  margin-right: 10px;
+}
+/*
+<div class="message__info">
+      <span class="message__time">{{ messageTime }}</span>
+    </div>
+*/
+.message__info {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 8px; /* Hinzufügen von Abstand zwischen Text und Zeitstempel */
+}
+
+.message--user .message__info {
+  justify-content: flex-end; /* Nachrichtenzeitstempel rechts ausrichten, wenn sie vom Benutzer stammen */
+}
+
+.message__time {
+  font-size: 10px;
+  color: #808080;
+  font-style: italic; /* Kursivschriftstil hinzufügen */
+  text-align: left; /* Links ausrichten, wenn die Nachricht nicht vom Benutzer stammt */
+}
+
+.message__image {
+  max-width: 100%;
+  max-height: 400px; /* Du kannst die Höhe anpassen, je nachdem, wie groß du das Bild haben möchtest */
+  object-fit: contain; /* Behält das Seitenverhältnis bei und stellt sicher, dass das gesamte Bild angezeigt wird */
+  border-radius: 8px;
+}
+
+.question-layout {
+  display: grid;
+  grid-template-areas: 
+    "buttons .";
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  width: fit-content;
+  height: fit-content;
+  gap: 8px;
+  border-radius: 20px;
+  background-color: rgb(184, 184, 184);
+  margin-top: 5px;
+}
+
+.first-question-line {
+  display: grid;
+  grid-template-areas:
+  "timer number";
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  width: 400px;
+  margin: auto;
+}
+
+.message__buttons {
+  grid-area: buttons;
+  display: block;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  margin-left: 5px;
+
+}
+
+.message__button {
+  background-color: #0084ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 400px;
+  height: fit-content;
+  padding: 8px 16px;
+  margin-top: 5px;
+}
+
+.message__button:hover {
+  background-color: #0066cc;
+}
+
+.question-number {
+  grid-area: number;
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  font-size: 16px;
+  font-weight: 500;
+  padding-top: 5px;
+}
+
+.last-question-line {
+  display: grid;
+  grid-template-areas:
+  "possible-points total-points";
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  width: 400px;
+  margin: auto;
+}
+
+.possible-points {
+  grid-area: possible-points;
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.total-points {
+  grid-area: total-points;
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 576px) {
+  .message {
+    display: flex;
+    width:100%;
+    justify-content: center;
+    margin-top: 100px;
+  }
+  }
+  /*
+  .timer {
+    background-color: blue;
+    color: white;
+    width: 100px;
+    height: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 24px;
+    transition:  30s;
+  }
+  */
+  /*
+  <div class="timer" id="timer">
+        </div>
+        */
+        
+  .timerStatic {
+    color: black;
+    display: flex;
+    font-size: 24px;
+    transition:  30s;
+  }
+  .timer-container {
+    padding: 5px;
+  }
+  
+  /*
+  .timer.fade-out {
+    width: 0px;
+  }
+  */
+  .displayedTime {
+    grid-area: timer;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
